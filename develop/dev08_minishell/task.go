@@ -92,6 +92,9 @@ func GoToExec(cmd []string) {
 			cmdKill(partCmd)
 		case "ps":
 			cmdPs(partCmd)
+		case "q":
+			fmt.Fprint(os.Stdout, "quit\n")
+			os.Exit(0)
 		default:
 			anotherCmd(partCmd)
 		}
