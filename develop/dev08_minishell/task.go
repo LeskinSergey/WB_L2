@@ -60,7 +60,7 @@ func cmdPs(cmd []string) {
 
 	for _, proc := range sliceProc {
 
-		fmt.Printf("Process name: %v process id: %v", proc.Executable(), proc.Pid())
+		fmt.Printf("Process name: %v process id: %v\n", proc.Executable(), proc.Pid())
 
 	}
 
