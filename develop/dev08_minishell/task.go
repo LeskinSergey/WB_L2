@@ -12,7 +12,7 @@ import (
 
 func cmdCd(cmd []string) {
 	if len(cmd) != 2 {
-		fmt.Fprint(os.Stderr, "please insert a path")
+		fmt.Fprint(os.Stderr, "please insert a path\n")
 	}
 	err := os.Chdir(cmd[1])
 	if err != nil {
@@ -21,7 +21,7 @@ func cmdCd(cmd []string) {
 }
 func cmdPwd(cmd []string) {
 	if len(cmd) > 1 {
-		fmt.Fprint(os.Stderr, "too many arguments")
+		fmt.Fprint(os.Stderr, "too many arguments\n")
 	} else {
 		path, err := os.Getwd()
 		if err != nil {
@@ -39,6 +39,7 @@ func cmdEcho(cmd []string) {
 			res := os.Getenv(cmd[i])
 			fmt.Print(res, " ")
 		}
+		fmt.Println()
 	}
 }
 func cmdKill(cmd []string) {
@@ -76,7 +77,7 @@ func anotherCmd(cmd []string) {
 	if err != nil {
 		fmt.Fprint(os.Stderr, err)
 	}
-	fmt.Print(string(output))
+	fmt.Println(string(output))
 }
 func GoToExec(cmd []string) {
 	for _, c := range cmd {
@@ -113,7 +114,6 @@ func main() {
 			cmd := stdin.Text()
 			cmdSlice := strings.Split(cmd, "|")
 			GoToExec(cmdSlice)
-			fmt.Println()
 		}
 	}
 }
