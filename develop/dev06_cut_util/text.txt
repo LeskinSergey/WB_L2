@@ -1,0 +1,6 @@
+qwerty 1 2 3
+zxcv 3 4 5 6
+qaq  qaqaq  qs qs q
+\t t\ t\ \t\\t t\t\
+\n n\n\n\n\n\n\n\n\\   n\n\n\ n\n\ n\\ n
+qaz\tqasd\nadsadasd\tdfg
