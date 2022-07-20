@@ -17,7 +17,6 @@ func main() {
 	if *f <= 0 {
 		log.Fatal("f <= 0")
 	}
-	//fmt.Println("arg", flag.Arg(0), "----d", *d, "-----s", *s, "----f", *f)
 	file, err := os.Open(flag.Arg(0))
 	if err != nil {
 		log.Fatal(err)
