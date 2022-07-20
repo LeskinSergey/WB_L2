@@ -53,6 +53,12 @@ func Unpack(s string) (string, error) {
 	return string(res), nil
 }
 
+//Задача на распаковку
+//Создать Go-функцию, осуществляющую примитивную распаковку строки, содержащую повторяющиеся символы/руны, например:
+//"a4bc2d5e" => "aaaabccddddde"
+//"abcd" => "abcd"
+//"45" => "" (некорректная строка)
+//"" => ""
 func main() {
 	text, _ := bufio.NewReader(os.Stdin).ReadString('\n')
 	s, err := Unpack(text)
